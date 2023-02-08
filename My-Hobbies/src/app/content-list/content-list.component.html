@@ -1,0 +1,12 @@
+<h3>No types</h3>
+<div class="content-list-container">
+    <app-content-card  *ngFor="let con of content | contentFilter:''"  [con]="con" ></app-content-card>
+  </div>
+<h3>Hobbies</h3>
+  <div class="content-list-container">
+    <app-content-card *ngFor="let con of content | contentFilter:'hobbies'"  [con]="con" ></app-content-card>
+  </div>
+  <h3>Videos</h3>
+  <div class="content-list-container">
+    <app-content-card *ngFor="let con of content | contentFilter:'video'"  [con]="con" ></app-content-card>
+  </div>

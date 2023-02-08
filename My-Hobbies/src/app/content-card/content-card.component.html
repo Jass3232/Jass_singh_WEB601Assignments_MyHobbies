@@ -1,3 +1,22 @@
 
-<span class="body">{{content.body}}</span>
-<span class="type">{{content.type}}</span>
+
+
+    
+    <div [ngClass]="{'type1': con.type === 'hobbies', 'type2': con.type === 'video','type3':con.type===''}">
+      <div class=" " style="width: 22rem;">
+       
+        <div class="card-body\">
+          
+          <header class="card ">{{con.id}}</header>
+          <h5 class="card-title">{{con.title |lowercase}}</h5>
+          <p class="card-text">{{con.description}}</p>
+          <p class="card-text">{{con.creator}}</p>
+          <h4 class="card-text">{{con.type}}</h4>
+          <img src="{{con.imgURL}}" (click)="Onclick(con)" class="card-img-top" alt="...">
+          
+          
+        </div>
+      </div>
+    </div>
+
+ 
