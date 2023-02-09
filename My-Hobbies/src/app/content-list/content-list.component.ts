@@ -10,12 +10,20 @@ export class ContentListComponent implements OnInit {
     throw new Error('Method not implemented.');
   }
 
-
+  searchTitle:string | undefined;
+  exist=false;
+  message:string | undefined
+  search()
+  {
+   const contentSearch= this.content.find(search=>search.title.toLowerCase()==this.searchTitle?.toLowerCase());
+   this.exist=!!contentSearch;
+   this.message=this.exist? `Content with tilte "${this.searchTitle}"  exist`: `Content with tilte "${this.searchTitle}"  does not exist`
+  }
 
 
   content:Content[]=[{
     id:0,
-    title: 'footballl',
+    title: 'football',
     description: 'I like to play football with my freinds.because it refresh me.',
     creator: 'my Freinds',
     type: 'game and hobbiess',
@@ -32,7 +40,7 @@ export class ContentListComponent implements OnInit {
   },
     {
   id: 2,
-      title: 'Movies  ',
+      title: 'Movies',
       description: 'I like to Watch movies with Family and freinds.because it refresh me..',
       creator: 'my Freinds',
       type: '',

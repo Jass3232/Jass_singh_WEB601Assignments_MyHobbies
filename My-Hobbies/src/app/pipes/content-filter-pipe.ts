@@ -11,7 +11,8 @@ export class ContentFilterPipe implements PipeTransform {
             return content.filter(c => !c.type);
         }
         else{
-            return content.filter(c => c.type==type);
+            
+            return content.filter(c => c.type.toLowerCase()==type.toLowerCase());
         }
     }
     }
