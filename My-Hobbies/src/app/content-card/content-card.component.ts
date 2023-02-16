@@ -10,7 +10,7 @@ import { Content } from '../helper-files/content-interface';
   styleUrls: ['./content-card.component.scss']
 })
 export class ContentCardComponent  {
-
+DefaultImage:string='/assets/img/no.jpg'
  @Input() con:any ;
 public Onclick(content:any)
 {

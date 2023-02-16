@@ -27,7 +27,7 @@ export class ContentListComponent implements OnInit {
     description: 'I like to play football with my freinds.because it refresh me.',
     creator: 'my Freinds',
     type: 'game and hobbiess',
-    imgURL:'/assets/img/1.jpg'
+    imgURL:''
   },
   
   {
@@ -37,6 +37,7 @@ export class ContentListComponent implements OnInit {
   creator: 'jaspreet singh',
   type: 'hobbies',
   imgURL:'/assets/img/2.jpg'
+  
   },
     {
   id: 2,
@@ -44,7 +45,7 @@ export class ContentListComponent implements OnInit {
       description: 'I like to Watch movies with Family and freinds.because it refresh me..',
       creator: 'my Freinds',
       type: '',
-      imgURL:'/assets/img/3.jpg'
+      imgURL:''
   
   },
   {
