@@ -10,17 +10,27 @@ export class ContentListComponent implements OnInit {
     throw new Error('Method not implemented.');
   }
 
-  searchTitle:string | undefined;
-  exist=false;
-  message:string | undefined
-  search()
-  {
-   const contentSearch= this.content.find(search=>search.title.toLowerCase()==this.searchTitle?.toLowerCase());
-   this.exist=!!contentSearch;
-   this.message=this.exist? `Content with tilte "${this.searchTitle}"  exist`: `Content with tilte "${this.searchTitle}"  does not exist`
+  // searchTitle:string | undefined;
+  // exist=false;
+  // message:string | undefined
+  // search()
+  // {
+  //  const contentSearch= this.content.find(search=>search.title.toLowerCase()==this.searchTitle?.toLowerCase());
+  //  this.exist=!!contentSearch;
+  //  this.message=this.exist? `Content with tilte "${this.searchTitle}"  exist`: `Content with tilte "${this.searchTitle}"  does not exist`
+  // }
+
+  addNewContent(content: any): void {
+    debugger
+    // add the new content to the contents array
+    this.content.push(content);
+
+    // log a success message
+    console.log(`Added ${content.title} successfully`);
+
+    // clone the contents array to trigger change detection
+    this.content = this.content.slice();
   }
-
-
   content:Content[]=[{
     id:0,
     title: 'football',
