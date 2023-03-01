@@ -88,7 +88,7 @@ export class ContentListComponent implements OnInit {
     title: 'sports',
     description: 'I like play sports.because it refresh me..',
     creator: 'my Freinds',
-    type: 'music',
+    type: 'Food',
     imgURL:'/assets/img/5.jpg'
   
   }

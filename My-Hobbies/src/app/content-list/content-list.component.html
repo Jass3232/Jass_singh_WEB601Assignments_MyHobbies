@@ -1,27 +1,30 @@
-
-<!-- <div class="search">
+<!-- 
+<div class="search">
   <input type="text" [(ngModel)]="searchTitle">
   <button (click)="search()">Search</button>
 </div>
 
 <div *ngIf="message" [ngClass]="{'success': exist, 'error': !exist}">
   {{message}}
-</div>
+</div> -->
 <h3>No types</h3>
 <div class="content-list-container">
     <app-content-card  *ngFor="let con of content | contentFilter:'' let first=first;let last=last"  isfirst="first"  islast="last" [con]="con" ></app-content-card>
   </div>
 <h3>Hobbies</h3>
   <div class="content-list-container">
-    <app-content-card  *ngFor="let con of content | contentFilter:'hobbies'"  [con]="con" ></app-content-card>
+    <app-content-card  *ngFor="let con of content | contentFilter:'Food'"  [con]="con" ></app-content-card>
   </div>
   <h3>Videos</h3>
   <div class="content-list-container">
     <app-content-card *ngFor="let con of content | contentFilter:'video'"  [con]="con" ></app-content-card>
-  </div> -->
+  </div>
   <div>
     <ul>
       <li  *ngFor="let con of content | contentFilter:'hobbies'">{{ con.title }}</li>
+      <li  *ngFor="let con of content | contentFilter:'video'">{{ con.title }}</li>
+      <li  *ngFor="let con of content | contentFilter:'Food'">{{ con.title }}</li>
+      
     </ul>
     <app-create-content (contentAdded)="addNewContent($event)"></app-create-content>
   </div>
