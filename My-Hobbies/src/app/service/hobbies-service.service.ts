@@ -9,12 +9,13 @@ import { MessageServiceService } from './message-service.service';
 export class HobbiesService {
 
   constructor(private messageService: MessageServiceService) { }
+  
   getContent(): Observable<any[]> {
     this.messageService.addMessage('Content array loaded!');
     return of(contentDb);
   }
   getContentById(id: number): Observable<any> {
     this.messageService.addMessage(`Content Item at id: ${id}`);
-    return of(contentDb.find(content => content.id === id)); // find id 1
+    return of(contentDb.find(content => content.id === id)); 
   }
 }
