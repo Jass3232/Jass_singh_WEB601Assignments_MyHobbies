@@ -1,2 +1,18 @@
-<!-- <app-content-card></app-content-card> -->
-<app-content-list></app-content-list>
+
+<!-- <app-app-messages></app-app-messages>
+<app-content-list></app-content-list> -->
+
+
+<div class="container">
+    <h1>{{ title }}</h1>
+    <div>
+      <label for="contentId">Enter Content ID:</label>
+      <input type="number" id="contentId" [(ngModel)]="id">
+      <button (click)="onRetrieveContentCard()">Get Content</button>
+      <app-app-messages></app-app-messages>
+    </div>
+    <hr>
+    <app-content-card [con]="contentCard"></app-content-card> 
+    <app-content-list></app-content-list>
+  
+  </div>
