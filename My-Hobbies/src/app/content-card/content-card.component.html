@@ -1,7 +1,4 @@
 
-
-
-    
     <div [ngClass]="{'type1': con.type === 'hobbies', 'type2': con.type === 'video','type3':con.type===''}"    >
       <div class=" " style="width: 22rem;">
        
@@ -12,11 +9,6 @@
           <p class="card-text" appHoverAffect hoverAffect="bold">{{con.description}}</p>
           <p class="card-text"  appHoverAffect hoverAffect="bold">{{con.creator}}</p>
           <p class="card-text"  appHoverAffect hoverAffect="underline">{{con.type}}</p>
-
-      
-         
-         
-         
           <!-- it will show image when imgurl is not empty -->
            <img   *ngIf="con.imgURL!=''" src="{{con.imgURL}}" (click)="Onclick(con)" class="card-img-top" alt="...">   
              <!-- it will show default image when imgurl is  empty -->

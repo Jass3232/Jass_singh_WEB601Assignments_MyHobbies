@@ -9,7 +9,10 @@ import { ContentListComponent } from './content-list/content-list.component';
 import { ContentFilterPipe } from './pipes/content-filter-pipe';
 import { HoverAffectDirective } from './hover-affect.directive';
 import { AppMessagesComponent } from './app-messages/app-messages.component';
-
+import { ModifyContentComponent } from './modify-content/modify-content.component';
+import { HttpClientModule } from '@angular/common/http';
+import { InMemoryWebApiModule } from 'angular-in-memory-web-api';
+import { MyDataService } from './service/DataService';
 @NgModule({
   declarations: [
     AppComponent,
@@ -18,11 +21,14 @@ import { AppMessagesComponent } from './app-messages/app-messages.component';
     ContentListComponent,
     HoverAffectDirective,
     AppMessagesComponent,
+    ModifyContentComponent,
    
   ],
   imports: [
     BrowserModule,
-   FormsModule
+    FormsModule,
+    HttpClientModule,
+    InMemoryWebApiModule.forRoot(MyDataService),
   ],
   providers: [],
   bootstrap: [AppComponent]

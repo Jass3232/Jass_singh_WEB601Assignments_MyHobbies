@@ -35,25 +35,25 @@ export class AppComponent {
     debugger
   
  
-    this.contentService.getContent().subscribe(content => {
-      if (idNumber > content.length) {
+    // this.contentService.getContent().subscribe(content => {
+    //   if (idNumber > content.length) {
       
-        this.errorMsg = 'Invalid ID number entered';
-        this.messageService.addMessage(this.errorMsg);
-      } else {
+    //     this.errorMsg = 'Invalid ID number entered';
+    //     this.messageService.addMessage(this.errorMsg);
+    //   } else {
       
-        this.contentService.getContentById(idNumber).subscribe(
-          (contentCard: any) => {
-            this.contentCard = contentCard;
-            this.messageService.addMessage(`Content Card at ID ${idNumber} retrieved`);
-          },
-          (error: any) => {
+    //     this.contentService.getContentById(idNumber).subscribe(
+    //       (contentCard: any) => {
+    //         this.contentCard = contentCard;
+    //         this.messageService.addMessage(`Content Card at ID ${idNumber} retrieved`);
+    //       },
+    //       (error: any) => {
             
-            this.errorMsg = 'Error retrieving content card';
-            this.messageService.addMessage(this.errorMsg);
-          }
-        );
-      }
-    });
+    //         this.errorMsg = 'Error retrieving content card';
+    //         this.messageService.addMessage(this.errorMsg);
+    //       }
+    //     );
+    //   }
+    // });
   }
 }
