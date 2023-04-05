@@ -1,8 +1,13 @@
 
 <app-modify-content (contentAdded)="onContentAdded($event)"></app-modify-content>
 <div class="search">
-  <input type="text" placeholder="enter title" [(ngModel)]="searchTitle">
-  <button (click)="search()">Search</button>
+
+    <!-- <input class="form-control" placeholder="enter title" [(ngModel)]="searchTitle"> -->
+    <mat-form-field>
+      <input matInput  placeholder="enter title" [(ngModel)]="searchTitle">
+    </mat-form-field><br/>
+  <!-- <input type="text" placeholder="enter title" [(ngModel)]="searchTitle"> -->
+  <button mat-raised-button color="primary" (click)="search()">Search</button>
 </div>
 
 <div *ngIf="message" [ngClass]="{'success': exist, 'error': !exist}">
