@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 
+
 import { AppComponent } from './app.component';
 import { MatButtonModule } from '@angular/material/button';
 import { ContentCardComponent } from './content-card/content-card.component';
@@ -19,9 +20,25 @@ import { MatCardModule } from '@angular/material/card';
 import { MatDialogModule } from '@angular/material/dialog';
 import { MatInputModule } from '@angular/material/input';
 import { MatFormFieldModule } from '@angular/material/form-field';
+import { RouterModule, Routes } from '@angular/router';
+import { ContentList } from './helper-files/content-list';
+import { NotfoundComponent } from './notfound/notfound.component';
+import { ContentDetailComponent } from './content-detail/content-detail.component';
+import { CommonModule } from '@angular/common';
+
+
+
+const routes: Routes = [
+  { path: '', redirectTo: '/list', pathMatch: 'full' },
+  { path: 'list', component: ContentListComponent },
+  { path: 'detail/:id', component: ContentDetailComponent },
+  { path: '**', component: NotfoundComponent },
+];
+
 @NgModule({
   declarations: [
     AppComponent,
+
     ContentFilterPipe,
     ContentCardComponent,
     ContentListComponent,
@@ -35,6 +52,8 @@ import { MatFormFieldModule } from '@angular/material/form-field';
   imports: [
     BrowserModule,
     FormsModule,
+    CommonModule,
+    RouterModule.forRoot(routes),
     HttpClientModule,
     InMemoryWebApiModule.forRoot(MyDataService),
     BrowserAnimationsModule,
@@ -43,6 +62,7 @@ import { MatFormFieldModule } from '@angular/material/form-field';
     MatDialogModule,
     MatInputModule ,
     MatFormFieldModule
+
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -15,14 +15,14 @@
               <mat-card-title>{{con.id}}</mat-card-title>
           
               <h5 class="card-title" appHoverAffect hoverAffect="bold" >{{con.title |lowercase}}</h5>
-              <p class="card-text" appHoverAffect hoverAffect="bold">{{con.description}}</p>
+              <!-- <p class="card-text" appHoverAffect hoverAffect="bold">{{con.description}}</p>
               <p class="card-text"  appHoverAffect hoverAffect="bold">{{con.creator}}</p>
-              <p class="card-text"  appHoverAffect hoverAffect="underline">{{con.type}}</p>
+              <p class="card-text"  appHoverAffect hoverAffect="underline">{{con.type}}</p> -->
               <!-- it will show image when imgurl is not empty -->
                <img   *ngIf="con.imgURL!=''" src="{{con.imgURL}}" style="width: 325px;" (click)="Onclick(con)" class="card-img-top" alt="...">   
                  <!-- it will show default image when imgurl is  empty -->
               <img  *ngIf="con.imgURL==''" src="{{DefaultImage}}" style="width: 325px;" (click)="Onclick(con)" class="card-img-top" alt="...">
-              
+              <a class="btn btn-primary" routerLink="/detail/{{ con.id }}">View Details</a>
             </div>
           </div>
         </div>

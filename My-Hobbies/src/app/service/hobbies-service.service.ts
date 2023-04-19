@@ -25,6 +25,10 @@ export class HobbiesService {
 
     return  this.http.get<Content[]>('api/contentDb');
   }
+  getContentById(id: number) {
+
+    return  this.http.get<Content[]>('api/contentDb/'+id);
+  }
   updateHero(content:any) {
     return this.http.put(`/api/contentDb/${content.id}`, content);
   }

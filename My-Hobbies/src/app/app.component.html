@@ -2,8 +2,8 @@
 <!-- <app-app-messages></app-app-messages>
 <app-content-list></app-content-list> -->
 
-<app-app-messages></app-app-messages> 
-<div class="container">
+<!-- <app-app-messages></app-app-messages> 
+<div class="container"> -->
     <!-- <h1>{{ title }}</h1>
     <div>
       <label for="contentId">Enter Content ID:</label>
@@ -14,6 +14,11 @@
     <hr>
     <app-content-card [con]="contentCard"></app-content-card>  -->
    
-    <app-content-list></app-content-list>
+    <!-- <app-content-list></app-content-list>
   
-  </div>
+  </div> -->
+<div class="container">
+  <app-app-messages></app-app-messages> 
+  <a   mat-raised-button color="accent" routerLink="/list">View Content List</a>
+  <router-outlet></router-outlet>
+</div>

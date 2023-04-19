@@ -11,13 +11,11 @@ import { MessageServiceService } from '../service/message-service.service';
   styleUrls: ['./modify-content.component.scss']
 })
 export class ModifyContentComponent {
-  dialogRef: any;
   
   constructor(private contentService: HobbiesService,private messageService: MessageServiceService,private dialog: MatDialog)
   {
     
   }
- 
   @Output() contentAdded = new EventEmitter<Content>();
   openDialog()
   {
@@ -30,13 +28,7 @@ export class ModifyContentComponent {
       console.log(`Dialog result: ${result}`);
       this.addContent(result)
     });
-  
-      this.dialogRef.close(this.con);
-    }
-  con(con: any) {
-    throw new Error('Method not implemented.');
   }
-  
   addContent(content:any) {
     debugger
     console.log(content)
@@ -81,7 +73,3 @@ export class ModifyContentComponent {
     // this.type = '';
   }
 }
-function closeDialog() {
-  throw new Error('Function not implemented.');
-}
-

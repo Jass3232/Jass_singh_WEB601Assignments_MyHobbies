@@ -16,7 +16,7 @@ orignalBorder:string='';
     
   }
   @HostListener('mouseenter') onMouseEnter(){
-    debugger
+ 
     if (this.hoverAffect === 'underline') {
       this.Element.nativeElement.style.textDecoration = 'underline';
     } else if (this.hoverAffect === 'bold') {
