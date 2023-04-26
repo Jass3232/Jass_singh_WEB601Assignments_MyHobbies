@@ -1,0 +1,32 @@
+
+div{
+    width: 440px;
+    
+    margin: 10px;
+    padding: 40px;
+    border: 1px solid black;
+}
+.isFirst{
+  
+ 
+    border: 2px solid black;
+
+   
+}
+/* You can add global styles to this file, and also import other style files */
+
+.search {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+   
+  }
+  
+  .success {
+    color: green;
+  }
+  
+  .error {
+    color: red;
+  }
+  

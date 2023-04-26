@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { ContentCardComponent } from './content-card.component';
+import { NotfoundComponent } from './notfound.component';
 
-describe('ContentCardComponent', () => {
-  let component: ContentCardComponent;
-  let fixture: ComponentFixture<ContentCardComponent>;
+describe('NotfoundComponent', () => {
+  let component: NotfoundComponent;
+  let fixture: ComponentFixture<NotfoundComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ ContentCardComponent ]
+      declarations: [ NotfoundComponent ]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(ContentCardComponent);
+    fixture = TestBed.createComponent(NotfoundComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
@@ -21,5 +21,3 @@ describe('ContentCardComponent', () => {
     expect(component).toBeTruthy();
   });
 });
-
-

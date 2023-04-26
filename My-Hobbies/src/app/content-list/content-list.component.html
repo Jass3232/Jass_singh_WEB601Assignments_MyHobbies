@@ -1,0 +1,29 @@
+
+<app-modify-content (contentAdded)="onContentAdded($event)"></app-modify-content>
+
+<div class="search">
+
+    <!-- <input class="form-control" placeholder="enter title" [(ngModel)]="searchTitle"> -->
+    <mat-form-field>
+      <input matInput  placeholder="enter title" [(ngModel)]="searchTitle">
+    </mat-form-field><br/>
+  <!-- <input type="text" placeholder="enter title" [(ngModel)]="searchTitle"> -->
+  <button mat-raised-button color="primary" (click)="search()">Search</button>
+</div>
+
+<div *ngIf="message" [ngClass]="{'success': exist, 'error': !exist}">
+  {{message}}
+</div>
+<h3>No types</h3>
+
+<div class="container">
+    <app-content-card  *ngFor="let con of content | contentFilter:'' let first=first;let last=last"  isfirst="first"  islast="last" [con]="con" ></app-content-card>
+  </div>
+<h3>Hobbies</h3>
+  <div class="container">
+    <app-content-card  *ngFor="let con of content | contentFilter:'hobbies'"  [con]="con" ></app-content-card>
+  </div>
+  <h3>Videos</h3>
+  <div class="container">
+    <app-content-card *ngFor="let con of content | contentFilter:'video'"  [con]="con" ></app-content-card>
+  </div>

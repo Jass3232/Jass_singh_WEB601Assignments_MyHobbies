@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { ContentCardComponent } from './content-card.component';
+import { DialogComponent } from './dialog.component';
 
-describe('ContentCardComponent', () => {
-  let component: ContentCardComponent;
-  let fixture: ComponentFixture<ContentCardComponent>;
+describe('DialogComponent', () => {
+  let component: DialogComponent;
+  let fixture: ComponentFixture<DialogComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ ContentCardComponent ]
+      declarations: [ DialogComponent ]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(ContentCardComponent);
+    fixture = TestBed.createComponent(DialogComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
@@ -21,5 +21,3 @@ describe('ContentCardComponent', () => {
     expect(component).toBeTruthy();
   });
 });
-
-
